@@ -1,0 +1,45 @@
+{
+  "name": "@cds-solutions/react-snackbars",
+  "version": "0.0.1",
+  "description": "Pretty simple and lightweight React UI library to snackbars",
+  "main": "/dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist/esm",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rm -rf dist/ && npm run build:esm && npm run build:cjs && npm run copy-assets",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module CommonJS --outDir dist/cjs ",
+    "copy-assets":"copyfiles -u 1 src/assets/** dist/cjs/ && copyfiles -u 1 src/assets/** dist/esm "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChezzyDerp/react-snackbars.git"
+  },
+  "keywords": [
+    "ui",
+    "snackbar",
+    "react"
+  ],
+  "author": "Ivan Tezin <ivantezin2@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChezzyDerp/react-snackbars/issues"
+  },
+  "homepage": "https://github.com/ChezzyDerp/react-snackbars#readme",
+  "devDependencies": {
+    "@types/node": "^18.7.23",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "copyfiles": "^2.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.8.3"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
