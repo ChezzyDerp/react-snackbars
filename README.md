@@ -1,7 +1,4 @@
-### Pretty simple and lightweight React UI library to snackbars
 
-### Install
-    npm i @cds-solutions/react-snackbars 
 
 ### Usage example
 	<SnackStack max={3}>
